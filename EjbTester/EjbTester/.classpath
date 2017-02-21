@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="src" path="src"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/JavaSE-1.8"/>
+	<classpathentry combineaccessrules="false" kind="src" path="/EjbComponent"/>
+	<classpathentry kind="con" path="org.jboss.ide.eclipse.as.classpath.core.ejb3.classpathContainer/Red Hat JBoss EAP 7.x"/>
+	<classpathentry kind="lib" path="C:/Users/User/EAP-7.0.0/bin/client/jboss-client.jar"/>
+	<classpathentry kind="output" path="bin"/>
+</classpath>
