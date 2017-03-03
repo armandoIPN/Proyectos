@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jboss-deployment-structure>
+    <deployment>
+        <!-- <exclusions>
+            <module name="org.apache.log4j"/>
+        </exclusions> -->
+        <dependencies>
+            <module name="javax.jms.api">
+                <imports>
+                    <include path="META-INF"/>
+                </imports>
+            </module>
+            <module name="org.hornetq.client">
+            	<imports>
+                    <include path="META-INF"/>
+                </imports>
+            
+            </module>
+            <module name="org.postgresql">
+            	<imports>
+                    <include path="META-INF"/>
+                </imports>
+            
+            </module>
+        </dependencies>
+    </deployment>
+</jboss-deployment-structure>

@@ -1,0 +1,8 @@
+eclipse.preferences.version=1
+encoding//src/com/aa/stateless/Author.java=UTF-8
+encoding//src/com/aa/stateless/Book.java=UTF-8
+encoding//src/com/aa/stateless/LibraryPersistentBean.java=UTF-8
+encoding//src/com/aa/stateless/LibraryService.java=UTF-8
+encoding//src/com/aa/stateless/LibraryServiceLocator.java=UTF-8
+encoding//src/com/aa/stateless/LibraryServiceSoapBindingStub.java=UTF-8
+encoding//src/com/aa/stateless/Publisher.java=UTF-8
