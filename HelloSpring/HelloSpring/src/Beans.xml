@@ -1,0 +1,111 @@
+<?xml version = "1.0" encoding = "UTF-8"?>
+<beans xmlns = "http://www.springframework.org/schema/beans"
+   xmlns:xsi = "http://www.w3.org/2001/XMLSchema-instance"
+   xsi:schemaLocation = "http://www.springframework.org/schema/beans
+   http://www.springframework.org/schema/beans/spring-beans-3.0.xsd
+   http://www.springframework.org/schema/context 
+    http://www.springframework.org/schema/context/spring-context-3.0.xsd"
+   xmlns:context="http://www.springframework.org/schema/context"
+   default-init-method = "init" 
+   default-destroy-method = "destroy">
+   <context:annotation-config/>
+   
+   <bean id = "beanTeamplate" abstract = "true">
+      <property name = "message1" value = "Hello World!"/>
+      <property name = "message2" value = "Hello Second World!"/>
+   </bean>
+
+ <bean id = "helloWorld" class = "com.aa.HelloWorld" parent="beanTeamplate">
+   </bean>
+
+   <bean id =" helloIndia" class = "com.aa.HelloIndia" parent = "beanTeamplate">
+      <property name = "message1" value = "Hello India!"/>
+      <property name = "message3" value = "Namaste India!"/>
+   </bean>
+
+<bean class = "com.aa.InitHelloWorld" />
+
+ <!-- Definition for textEditor bean using inner bean -->
+   <bean id = "textEditor" class = "com.aa.TextEditor">
+      	<property name = "name" value = "Generic Text Editor" />
+   </bean>
+   
+   <bean id = "spellChecker" class = "com.aa.SpellChecker"></bean>
+   
+   <bean id = "javaCollection" class = "com.aa.JavaCollection">
+      
+      <!-- results in a setAddressList(java.util.List) call -->
+      <property name = "addressList">
+         <list>
+            <value>INDIA</value>
+            <value>Pakistan</value>
+            <value>USA</value>
+            <value>USA</value>
+            <!-- <ref bean = "address1"/>
+            <ref bean = "address2"/> -->
+         </list>
+      </property>
+
+      <!-- results in a setAddressSet(java.util.Set) call -->
+      <property name = "addressSet">
+         <set>
+            <value>INDIA</value>
+            <value>Pakistan</value>
+            <value>USA</value>
+            <value>USA</value>
+            <!-- <ref bean = "address1"/>
+            <ref bean = "address2"/> -->
+         </set>
+      </property>
+
+      <!-- results in a setAddressMap(java.util.Map) call -->
+      <property name = "addressMap">
+         <map>
+            <entry key = "1" value = "INDIA"/>
+            <entry key = "2" value = "Pakistan"/>
+            <entry key = "3" value = "USA"/>
+            <entry key = "4" value = "USA"/>
+            <!-- <entry key = "two" value-ref = "address1"/>
+            <entry key = "three" value-ref = "address2"/> -->
+         </map>
+      </property>
+      
+      <!-- results in a setAddressProp(java.util.Properties) call -->
+      <property name = "addressProp">
+         <props>
+            <prop key = "one">INDIA</prop>
+            <prop key = "one">INDIA</prop>
+            <prop key = "two">Pakistan</prop>
+            <prop key = "three">USA</prop>
+            <prop key = "four">USA</prop>
+         </props>
+      </property>
+   </bean>
+   
+   <!-- <bean id = "address1" class = "String" />
+   <bean id = "address2" class = "String"/> -->
+   
+   <!-- Definition for student bean -->
+   <bean id = "student" class = "com.aa.Student">
+      <property name = "name" value = "Zara"></property>
+      <!-- try without passing age and check the result -->
+      <property name = "age"  value = "11"/>
+   </bean>
+   
+   
+   <!-- Definition for profile bean -->
+   <bean id = "profile" class = "com.aa.Profile"></bean>
+
+   <!-- Definition for student1 bean -->
+   <bean id = "student1" class = "com.aa.Student">
+      <property name = "name" value = "Zara" />
+      <property name = "age" value = "11"/>
+   </bean>
+
+   <!-- Definition for student2 bean -->
+   <bean id = "student2" class = "com.aa.Student">
+      <property name = "name" value = "Nuha" />
+      <property name = "age" value = "2"/>
+   </bean>
+   
+</beans>
