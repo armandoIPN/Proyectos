@@ -7,12 +7,12 @@ import org.springframework.beans.factory.annotation.Autowired;
 public class TextEditor {
 	
 	   private SpellChecker spellChecker;
-	   private String name;
+	   /*private String name;
 	   
 
 	   public TextEditor() {
 		super();
-	   }
+	   }*/
 	   
 	   
 	public TextEditor(SpellChecker spellChecker) {
@@ -20,7 +20,7 @@ public class TextEditor {
 	      this.spellChecker = spellChecker;
 	   }
 	   
-	   // a setter method to inject the dependency.
+	   /*// a setter method to inject the dependency.
 	@Resource(name = "spellChecker")
 	   public void setSpellChecker(SpellChecker spellChecker) {
 	      System.out.println("Inside setSpellChecker." );
@@ -38,7 +38,7 @@ public class TextEditor {
 		   public String getName() {
 		      return name;
 		   }
-	   
+	   */
 	   public void spellCheck() {
 	      spellChecker.checkSpelling();
 	   }
