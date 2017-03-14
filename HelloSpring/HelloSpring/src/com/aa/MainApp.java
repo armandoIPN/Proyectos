@@ -53,18 +53,20 @@ public class MainApp {
 	      profile.printAge();
 	      profile.printName();*/
 	   
-	  /* AbstractApplicationContext ctx = 
+	   AbstractApplicationContext ctx = 
 		         new AnnotationConfigApplicationContext(HelloWorldConfig.class);
 		   
+	   ctx.start();
 		      HelloWorld helloWorld = ctx.getBean(HelloWorld.class);
 		      helloWorld.setMessage("Hello World!");
-		      helloWorld.getMessage();*/
+		      helloWorld.getMessage();
+		      ctx.stop();
 	   
-	   AbstractApplicationContext ctx = 
+	   /*AbstractApplicationContext ctx = 
 		         new AnnotationConfigApplicationContext(TextEditorConfig.class);
 
 		      TextEditor te = ctx.getBean(TextEditor.class);
-		      te.spellCheck();
+		      te.spellCheck();*/
 	   
       //context.registerShutdownHook();
     
